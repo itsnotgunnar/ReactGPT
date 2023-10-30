@@ -16,15 +16,15 @@ This is a comprehensive simulation framework written in Python to manage tasks a
 ## Installation
 
 ```bash
-git clone https://github.com/YourUsername/YourRepoName.git
+git clone https://github.com/itsnotgunnar/projectGPT.git
 cd YourRepoName
-pip install -r requirements.txt```
+pip install -r requirements.txt
 
 ## Usage
 
 Run the script by executing:
 ```bash
-python main.py```
+python main.py
 
 ## Roles and Tasks
 
