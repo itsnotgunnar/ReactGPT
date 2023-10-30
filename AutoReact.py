@@ -43,22 +43,62 @@ agents = {
 
 # Define role interactions and task dependencies
 role_interactions = {
-    'project_manager': {'next_role': 'react_component_dev', 'task_message': 'Define project scope, timeline, and allocate resources.'},
-    'react_component_dev': {'next_role': 'styling_dev', 'task_message': 'Develop reusable React components.'},
-    'styling_dev': {'next_role': 'db_architect', 'task_message': 'Design styling and themes.'},
-    'db_architect': {'next_role': 'api_dev', 'task_message': 'Design the database schema.'},
-    'api_dev': {'next_role': 'state_management', 'task_message': 'Develop API endpoints.'},
-    'state_management': {'next_role': 'react_router', 'task_message': 'Set up state management.'},
-    'react_router': {'next_role': 'auth_specialist', 'task_message': 'Implement React routing.'},
-    'auth_specialist': {'next_role': 'frontend_tester', 'task_message': 'Implement authentication and authorization.'},
-    'frontend_tester': {'next_role': 'backend_tester', 'task_message': 'Conduct front-end tests.'},
-    'backend_tester': {'next_role': 'e2e_tester', 'task_message': 'Conduct back-end tests.'},
-    'e2e_tester': {'next_role': None, 'task_message': 'Conduct end-to-end tests.'},
+    'project_manager': {
+        'next_role': 'react_component_dev',
+        'task_message': 'Define project scope, timeline, and allocate resources.'
+    },
+    'react_component_dev': {
+        'next_role': 'styling_dev',
+        'task_message': 'Develop reusable React components.'
+    },
+    'styling_dev': {
+        'next_role': 'db_architect',
+        'task_message': 'Design styling and themes.'
+    },
+    'db_architect': {
+        'next_role': 'api_dev',
+        'task_message': 'Design the database schema.'
+    },
+    'api_dev': {
+        'next_role': 'state_management',
+        'task_message': 'Develop API endpoints.'
+    },
+    'state_management': {
+        'next_role': 'react_router',
+        'task_message': 'Set up state management.'
+    },
+    'react_router': {
+        'next_role': 'auth_specialist',
+        'task_message': 'Implement React routing.'
+    },
+    'auth_specialist': {
+        'next_role': 'frontend_tester',
+        'task_message': 'Implement authentication and authorization.'
+    },
+    'frontend_tester': {
+        'next_role': 'backend_tester',
+        'task_message': 'Conduct front-end tests.'
+    },
+    'backend_tester': {
+        'next_role': 'e2e_tester',
+        'task_message': 'Conduct back-end tests.'
+    },
+    'e2e_tester': {
+        'next_role': None,
+        'task_message': 'Conduct end-to-end tests.'
+    },
 }
 
-# Task execution logic
+
 def execute_task(current_role):
+    """
+    Execute the task based on the current role.
+
+    Parameters:
+        current_role (str): The current role to execute the task.
+    """
     next_role_info = role_interactions.get(current_role)
+    
     if not next_role_info:
         print(f"Role {current_role} has no further interactions.")
         return
