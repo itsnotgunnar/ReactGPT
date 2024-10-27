@@ -1,6 +1,8 @@
 # DevOpsGPT
 An Automated Agile Workflow Simulator for Development using GPT-4 API, Python and Autogen. 
 
+# DEPRECATED: OPENAI DOES IT BETTER
+
 ## Installation
 
 ```bash
